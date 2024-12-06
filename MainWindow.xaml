@@ -1,0 +1,74 @@
+﻿<Window x:Class="MyCalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="450" Width="350"
+        Background="#2C3E50" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#34495E"/>
+            <Setter Property="BorderBrush" Value="#2C3E50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Foreground" Value="#ECF0F1"/>
+            <Setter Property="Background" Value="#34495E"/>
+            <Setter Property="BorderBrush" Value="#2C3E50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <TextBox Name="Display" IsReadOnly="True" Height="60"/>
+
+        
+        <UniformGrid Grid.Row="1" Columns="4">
+            <Button Content="1" Click="NumberButton_Click"/>
+            <Button Content="2" Click="NumberButton_Click"/>
+            <Button Content="3" Click="NumberButton_Click"/>
+            <Button Content="+" Click="OperatorButton_Click"/>
+            <Button Content="4" Click="NumberButton_Click"/>
+            <Button Content="5" Click="NumberButton_Click"/>
+            <Button Content="6" Click="NumberButton_Click"/>
+            <Button Content="-" Click="OperatorButton_Click"/>
+            <Button Content="7" Click="NumberButton_Click"/>
+            <Button Content="8" Click="NumberButton_Click"/>
+            <Button Content="9" Click="NumberButton_Click"/>
+            <Button Content="*" Click="OperatorButton_Click"/>
+            <Button Content="C" Click="ClearButton_Click" Background="#E74C3C"/>
+            <Button Content="0" Click="NumberButton_Click"/>
+            <Button Content="=" Click="EqualsButton_Click" Background="#27AE60"/>
+            <Button Content="/" Click="OperatorButton_Click"/>
+        </UniformGrid>
+    </Grid>
+</Window>
